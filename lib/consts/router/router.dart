@@ -5,6 +5,15 @@ import 'package:resume_builder/consts/router/router.gr.dart';
 class AppRouter extends $AppRouter {
   @override
   late final List<AutoRoute> routes = [
-    AdaptiveRoute(page: HomeRoute.page, path: '/home', initial: true),
+    AdaptiveRoute(page: ResumeRoute.page, path: '/resume'),
+    AdaptiveRoute(
+      page: NavBarRoute.page,
+      path: '/navbar',
+      initial: true,
+      children: [
+        AdaptiveRoute(page: HomeRoute.page),
+        AdaptiveRoute(page: ResumeEditRoute.page),
+      ],
+    ),
   ];
 }
