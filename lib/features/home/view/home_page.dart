@@ -1,13 +1,16 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+@RoutePage()
 class HomePage extends StatelessWidget {
-const HomePage({ Key? key }) : super(key: key);
+  const HomePage({super.key});
 
   @override
-  Widget build(BuildContext context){
-    return HomeView();
+  Widget build(BuildContext context) {
+    return const HomeView();
   }
 }
+
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
 
@@ -20,9 +23,9 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: const Text('Home Page'),
       ),
-      body: Center(
+      body: const Center(
         child: Text('Welcome to the Home Page'),
       ),
     );

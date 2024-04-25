@@ -1,18 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:resume_builder/features/home/view/home_page.dart';
+import 'package:resume_builder/consts/app/app.dart';
 
 void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomePage(),
-    );
-  }
+  runApp(ResumeBuilder());
 }
