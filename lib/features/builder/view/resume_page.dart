@@ -22,8 +22,15 @@ class ResumeBuilderView extends StatefulWidget {
 class _ResumeBuilderViewState extends State<ResumeBuilderView> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: ResumeBuilderBody(),
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+            onPressed: () {
+              context.router.pop();
+            },
+            icon: const Icon(Icons.arrow_back)),
+      ),
+      body: const ResumeBuilderBody(),
     );
   }
 }
